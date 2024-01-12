@@ -1,12 +1,13 @@
 import math
 
-with open("/Users/dhikshitha./Desktop/KLA-Hackathon/Kla hackathon/Milestone2/Input/Testcase"+str(3)+".txt", "r") as file1:
+with open("/Users/dhikshitha./Desktop/KLA-Hackathon/Kla hackathon/Milestone2/Input/Testcase"+str(2)+".txt", "r") as file1:
         read_content = file1.readlines()
         print(read_content)
 data={}
 for line in read_content: 
     key, value = line.strip().split(':') 
     data[key] = value
+    
 print(data)
 print(read_content,end='\n\n')
 x=int(data['DieSize'].split('x')[0])
@@ -23,9 +24,9 @@ o_x,o_y=abs(int(math.trunc(ref_die_x/x))),abs(int(math.trunc(ref_die_y/y)))
 print(o_x,o_y)
 max_x=abs(math.ceil(r/x))
 max_y=abs(math.ceil(r/y))
-valid_ind=[]
-print(o_x,o_y)
+
 print(max_x,max_y)
+
 res={}
 for i in range(0,max_x+1):
     for j in range (0,max_y+1):
